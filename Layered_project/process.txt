@@ -1,0 +1,9 @@
+1. code from back 
+ database , dao then service then main
+2. connect them 
+    Dao - database
+    service - dao
+    main - service
+3. make objects and call methods 
+4. make model and create employee
+then connect the database and try to save the details in database

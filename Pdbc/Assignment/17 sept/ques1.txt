@@ -1,0 +1,507 @@
+ASSIGNMENT 1: STUDENT MANAGEMENT SYSTEM
+=======================================
+
+-------
+A coaching institute wants to manage student records using
+Python Database Connectivity (PDBC).
+
+TABLE STRUCTURE
+===============
+
+Table Name: student_pdbc
+
+Column       Data Type
+--------------------------------
+sid          INT PRIMARY KEY
+sname        VARCHAR(50)
+course       VARCHAR(50)
+fees         DECIMAL(10,2)
+city         VARCHAR(30)
+
+create table student_pdbc(sid int primary key, sname varchar(50),course varchar(50),fees decimal(10,2),city varchar(30));
+
+SAMPLE DATA
+===========
+
+insert into student_pdbc values(101,"Amit","Python",15000.00,"Indore"),(102,"Priya","Java",18000.00,"bhopal"),(103,"rahul","Python",15000.00,"Indore"),(104,"neha","java",18000,"Ujjain"),(105,"karan","Mern",20000,"Indore");
+
+sid   sname    course    fees       city
+------------------------------------------------
+101   Amit     Python    15000.00   Indore
+102   Priya    Java      18000.00   Bhopal
+103   Rahul    Python    15000.00   Indore
+104   Neha     Java      18000.00   Ujjain
+105   Karan    MERN      20000.00   Indore
+
+
+MENU
+====
+
+===== STUDENT MANAGEMENT SYSTEM =====
+1. Add Student
+2. Display All Students
+3. Search Student by Name
+4. Update Student Fees
+5. Delete Student
+6. Exit
+
+Enter your choice:
+
+
+TASK 1: ADD STUDENT
+===================
+
+INPUT
+-----
+Enter your choice: 1
+Enter Student ID: 106
+Enter Student Name: Anjali
+Enter Course: Python
+Enter Fees: 15000
+Enter City: Dewas
+
+OUTPUT
+------
+Student inserted successfully.
+
+
+TASK 2: DISPLAY ALL STUDENTS
+============================
+
+INPUT
+-----
+Enter your choice: 2
+
+OUTPUT
+------
+ID    Name      Course    Fees       City
+------------------------------------------------
+101   Amit      Python    15000.00   Indore
+102   Priya     Java      18000.00   Bhopal
+103   Rahul     Python    15000.00   Indore
+104   Neha      Java      18000.00   Ujjain
+105   Karan     MERN      20000.00   Indore
+106   Anjali    Python    15000.00   Dewas
+
+
+TASK 3: SEARCH STUDENT BY NAME USING LIKE
+=========================================
+
+INPUT
+-----
+Enter your choice: 3
+Enter name to search: an
+
+OUTPUT
+------
+Matching students:
+
+ID    Name      Course    Fees       City
+------------------------------------------------
+105   Karan     MERN      20000.00   Indore
+106   Anjali    Python    15000.00   Dewas
+
+NOTE
+----
+Use a parameterized query with:
+WHERE sname LIKE %s
+
+Pass the search pattern:
+'%' + search_name + '%'
+
+
+TASK 4: UPDATE STUDENT FEES
+===========================
+
+INPUT
+-----
+Enter your choice: 4
+Enter Student ID: 101
+Enter New Fees: 17000
+
+OUTPUT
+------
+Student fees updated successfully.
+
+
+TASK 5: DELETE STUDENT
+======================
+
+INPUT
+-----
+Enter your choice: 5
+Enter Student ID: 104
+
+OUTPUT
+------
+Student deleted successfully.
+
+
+TASK 6: EXIT
+============
+
+INPUT
+-----
+Enter your choice: 6
+
+OUTPUT
+------
+Thank you for using Student Management System.
+
+
+=========================================================
+ASSIGNMENT 2: EMPLOYEE MANAGEMENT SYSTEM
+=========================================================
+
+--------
+A company wants to maintain employee details, departments,
+salaries, and cities using Python PDBC.
+
+TABLE STRUCTURE
+===============
+
+Table Name: employee_pdbc
+
+Column       Data Type
+--------------------------------
+eid          INT PRIMARY KEY
+ename        VARCHAR(50)
+department   VARCHAR(40)
+salary       DECIMAL(10,2)
+city         VARCHAR(30)
+
+
+SAMPLE DATA
+===========
+
+eid   ename    department    salary      city
+----------------------------------------------------
+201   Amit     IT            45000.00    Indore
+202   Priya    HR            40000.00    Bhopal
+203   Rahul    IT            55000.00    Indore
+204   Neha     Finance       50000.00    Ujjain
+205   Karan    IT            60000.00    Indore
+
+
+MENU
+====
+
+===== EMPLOYEE MANAGEMENT SYSTEM =====
+1. Add Employee
+2. Display All Employees
+3. Search Employee by Name
+4. Update Employee Salary
+5. Delete Employee
+6. Exit
+
+Enter your choice:
+
+
+TASK 1: ADD EMPLOYEE
+====================
+
+INPUT
+-----
+Enter your choice: 1
+Enter Employee ID: 206
+Enter Employee Name: Anjali
+Enter Department: HR
+Enter Salary: 42000
+Enter City: Dewas
+
+OUTPUT
+------
+Employee inserted successfully.
+
+
+TASK 2: DISPLAY ALL EMPLOYEES
+=============================
+
+INPUT
+-----
+Enter your choice: 2
+
+OUTPUT
+------
+ID    Name      Department    Salary      City
+----------------------------------------------------
+201   Amit      IT            45000.00    Indore
+202   Priya     HR            40000.00    Bhopal
+203   Rahul     IT            55000.00    Indore
+204   Neha      Finance       50000.00    Ujjain
+205   Karan     IT            60000.00    Indore
+206   Anjali    HR            42000.00    Dewas
+
+
+TASK 3: SEARCH EMPLOYEE BY NAME USING LIKE
+==========================================
+
+INPUT
+-----
+Enter your choice: 3
+Enter name to search: ra
+
+OUTPUT
+------
+Matching employees:
+
+ID    Name      Department    Salary      City
+----------------------------------------------------
+203   Rahul     IT            55000.00    Indore
+205   Karan     IT            60000.00    Indore
+
+NOTE
+----
+Use:
+WHERE ename LIKE %s
+
+Pass:
+'%' + search_name + '%'
+
+
+TASK 4: UPDATE EMPLOYEE SALARY
+=============================
+
+INPUT
+-----
+Enter your choice: 4
+Enter Employee ID: 201
+Enter New Salary: 48000
+
+OUTPUT
+------
+Employee salary updated successfully.
+
+
+TASK 5: DELETE EMPLOYEE
+=======================
+
+INPUT
+-----
+Enter your choice: 5
+Enter Employee ID: 202
+
+OUTPUT
+------
+Employee deleted successfully.
+
+
+TASK 6: EXIT
+============
+
+INPUT
+-----
+Enter your choice: 6
+
+OUTPUT
+------
+Thank you for using Employee Management System.
+
+
+
+
+=========================================================
+ASSIGNMENT 3: PRODUCT INVENTORY MANAGEMENT SYSTEM
+=========================================================
+
+SCENARIO
+--------
+A retail shop wants to manage product details, prices,
+categories, and available stock using Python PDBC.
+
+CONCEPTS TO PRACTICE
+--------------------
+1. INSERT
+2. SELECT
+3. UPDATE
+4. DELETE
+5. LIKE operator
+6. Parameterized queries
+7. commit()
+8. fetchall()
+9. Menu-driven programming
+
+
+TABLE STRUCTURE
+===============
+
+Table Name: product_pdbc
+
+Column       Data Type
+--------------------------------
+pid          INT PRIMARY KEY
+pname        VARCHAR(60)
+category     VARCHAR(40)
+price        DECIMAL(10,2)
+quantity     INT
+
+
+SAMPLE DATA
+===========
+
+pid   pname       category       price       quantity
+------------------------------------------------------------
+301   Laptop      Electronics    55000.00    10
+302   Mouse       Electronics      800.00    50
+303   Keyboard    Electronics     1500.00    30
+304   Notebook    Stationery       100.00   100
+305   Pen         Stationery        20.00   200
+
+
+MENU
+====
+
+===== PRODUCT INVENTORY SYSTEM =====
+1. Add Product
+2. Display All Products
+3. Search Product by Name
+4. Update Product Price
+5. Delete Product
+6. Exit
+
+Enter your choice:
+
+
+TASK 1: ADD PRODUCT
+===================
+
+INPUT
+-----
+Enter your choice: 1
+Enter Product ID: 306
+Enter Product Name: Monitor
+Enter Category: Electronics
+Enter Price: 12000
+Enter Quantity: 15
+
+OUTPUT
+------
+Product inserted successfully.
+
+
+TASK 2: DISPLAY ALL PRODUCTS
+============================
+
+INPUT
+-----
+Enter your choice: 2
+
+OUTPUT
+------
+ID    Product       Category       Price       Quantity
+------------------------------------------------------------
+301   Laptop        Electronics     55000.00    10
+302   Mouse         Electronics       800.00    50
+303   Keyboard      Electronics      1500.00    30
+304   Notebook      Stationery        100.00   100
+305   Pen           Stationery         20.00   200
+306   Monitor       Electronics     12000.00    15
+
+
+TASK 3: SEARCH PRODUCT BY NAME USING LIKE
+=========================================
+
+INPUT
+-----
+Enter your choice: 3
+Enter product name to search: o
+
+OUTPUT
+------
+Matching products:
+
+ID    Product       Category       Price       Quantity
+------------------------------------------------------------
+301   Laptop        Electronics     55000.00    10
+302   Mouse         Electronics       800.00    50
+304   Notebook      Stationery        100.00   100
+306   Monitor       Electronics     12000.00    15
+
+NOTE
+----
+Use:
+WHERE pname LIKE %s
+
+Pass:
+'%' + search_name + '%'
+
+
+TASK 4: UPDATE PRODUCT PRICE
+============================
+
+INPUT
+-----
+Enter your choice: 4
+Enter Product ID: 302
+Enter New Price: 900
+
+OUTPUT
+------
+Product price updated successfully.
+
+
+TASK 5: DELETE PRODUCT
+======================
+
+INPUT
+-----
+Enter your choice: 5
+Enter Product ID: 305
+
+OUTPUT
+------
+Product deleted successfully.
+
+
+TASK 6: EXIT
+============
+
+INPUT
+-----
+Enter your choice: 6
+
+OUTPUT
+------
+Thank you for using Product Inventory System.
+
+
+add these scenarios also:--
+
+1. Display all products from Electronics category.
+2. Display all products from Stationery category.
+3. Search products whose names contain 'oo'.
+4. Search products whose names start with 'M'.
+5. Search products whose names end with 'e'.
+6. Display products whose price is greater than 1000.
+7. Display products whose quantity is less than 20.
+8. Update product quantity.
+9. Update product category.
+10. Delete a product by ID.
+11. Display products whose category contains 'tron'.
+12. Search products by a user-provided price range.
+
+
+
+SUGGESTED SUCCESS MESSAGES
+==========================
+
+INSERT:
+Record inserted successfully.
+
+SELECT:
+Records displayed successfully.
+
+UPDATE:
+Record updated successfully.
+
+DELETE:
+Record deleted successfully.
+
+NOT FOUND:
+No record found for the given ID.
+
+INVALID CHOICE:
+Invalid choice. Please try again.
+
+EXIT:
+Thank you for using the system.
